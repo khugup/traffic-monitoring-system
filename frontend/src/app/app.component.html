@@ -1,0 +1,21 @@
+<header class="app-navbar theme-pink d-flex align-items-center justify-content-between">
+  <div class="d-flex align-items-center">
+    <i class="fa fa-home me-2"></i>
+    <strong>Traffic Surveillance System</strong>
+  </div>
+
+  <nav>
+    <a class="text-white me-3" routerLink="/add-road" routerLinkActive="fw-bold">Add Road</a>
+    <a class="text-white me-3" routerLink="/roads" routerLinkActive="fw-bold">List Of Road</a>
+    <a class="text-white" routerLink="/traffic" routerLinkActive="fw-bold">Traffic Data</a>
+  </nav>
+</header>
+
+<!-- MAIN CONTENT WRAPPER (important) -->
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="app-footer">
+  © 2024 Contact Me :) Instagram || LinkedIn
+</footer>

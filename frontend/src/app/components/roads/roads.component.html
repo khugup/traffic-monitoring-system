@@ -1,0 +1,38 @@
+<div class="table-container">
+  <div class="white-card center-card">
+    <h4 class="text-center">List Of Roads</h4>
+
+    <table class="table table-striped mt-3">
+      <thead>
+        <tr>
+          <th>Road Name</th>
+          <th>Detector Name</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let r of roads">
+          <td>{{ r.roadName }}</td>
+          <td>{{ r.detectorName }}</td>
+          <td>{{ r.status }}</td>
+
+          <td>
+            <a [routerLink]="['/roads', r.id]" class="icon-action text-primary" title="View">
+              <i class="fa fa-eye"></i>
+            </a>
+
+            <span class="icon-action text-success" title="Edit">
+              <i class="fa fa-pen"></i>
+            </span>
+
+            <span class="icon-action text-danger" (click)="deleteRoad(r.id)" title="Delete">
+              <i class="fa fa-trash"></i>
+            </span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
