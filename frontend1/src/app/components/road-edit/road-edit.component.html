@@ -1,0 +1,26 @@
+<div *ngIf="road" class="white-card center-card">
+  <h4 class="text-center">Edit Road</h4>
+
+  <form (ngSubmit)="save()">
+    <div class="mb-2">
+      <label>Road Name:</label>
+      <input [(ngModel)]="road.roadName" name="roadName" class="form-control" required>
+    </div>
+
+    <div class="mb-2">
+      <label>Detector Name:</label>
+      <input [(ngModel)]="road.detectorName" name="detectorName" class="form-control" required>
+    </div>
+
+    <div class="mb-2">
+      <label>Status:</label>
+      <select [(ngModel)]="road.detectorStatus" name="detectorStatus" class="form-control">
+        <option [value]="true">UP</option>
+        <option [value]="false">DOWN</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Save</button>
+    <a [routerLink]="['/roads', road.id]" class="btn btn-secondary">Cancel</a>
+  </form>
+</div>

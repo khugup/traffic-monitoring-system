@@ -1,0 +1,22 @@
+<div class="center-card">
+  <div class="white-card">
+    <h4 class="text-center">Register Road Details</h4>
+    <form (ngSubmit)="submit()" [formGroup]="form">
+      <div class="mb-2">
+        <input class="form-control" formControlName="name" placeholder="Road Name*" />
+      </div>
+      <div class="mb-2">
+        <input class="form-control" formControlName="detector" placeholder="Detector Name*" />
+      </div>
+      <div class="mb-2">
+        <select class="form-select" formControlName="status">
+          <option value="UP">UP</option>
+          <option value="Down">Down</option>
+        </select>
+      </div>
+      <div class="text-center">
+        <button class="btn btn-primary">Save</button>
+      </div>
+    </form>
+  </div>
+</div>

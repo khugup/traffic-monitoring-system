@@ -1,0 +1,30 @@
+<header class="app-navbar theme-pink d-flex align-items-center justify-content-between">
+  <div class="d-flex align-items-center">
+    <!-- Make the home icon clickable -->
+    <a [routerLink]="['/']" class="text-white me-2">
+      <i class="fa fa-home"></i>
+    </a>
+    <strong>Traffic Surveillance System</strong>
+  </div>
+
+  <nav>
+    <a class="text-white me-3" routerLink="/add-road" routerLinkActive="fw-bold">Add Road</a>
+    <a class="text-white me-3" routerLink="/roads" routerLinkActive="fw-bold">List Of Road</a>
+    <a class="text-white" routerLink="/traffic" routerLinkActive="fw-bold">Traffic Data</a>
+  </nav>
+</header>
+
+<main>
+  <router-outlet></router-outlet>
+</main>
+
+<footer class="app-footer text-center py-2">
+  © 2025 Contact Me :) 
+  <a href="https://www.instagram.com/i__khusi3408/" target="_blank" rel="noopener noreferrer">
+    Instagram
+  </a> 
+  || 
+  <a href="https://www.linkedin.com/in/khushi-gupta-a90418247" target="_blank" rel="noopener noreferrer">
+    LinkedIn
+  </a>
+</footer>

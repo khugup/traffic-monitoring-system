@@ -1,0 +1,47 @@
+<div class="table-container">
+  <div class="white-card center-card">
+    <h4 class="text-center">Traffic Data</h4>
+
+    <table class="table table-bordered mt-3">
+      <thead class="table-light">
+        <tr>
+          <th>Road Name</th>
+          <th>Detector Name</th>
+          <th>Occupancy %</th>
+          <th>Average Speed</th>
+          <th>Class 1</th>
+          <th>Class 2</th>
+          <th>Class 3</th>
+          <th>Total Volume</th>
+          <th>Date</th>
+          <th>Period</th>
+          <th>Congestion</th>
+        </tr>
+      </thead>
+
+      <tbody>
+  <tr *ngFor="let t of trafficData">
+    <td>{{ t.roadName }}</td>
+    <td>{{ t.detectorName }}</td>
+    <td>{{ t.occupancyPercentage | number:'1.0-2' }}</td>
+    <td>{{ t.averageSpeed | number:'1.0-2' }}</td>
+
+    <td>{{ t.classOneVolume }}</td>
+    <td>{{ t.classTwoVolume }}</td>
+    <td>{{ t.classThreeVolume }}</td>
+
+    <td>{{ t.volume }}</td>
+    <td>{{ t.date | date:'short' }}</td>
+    <td>{{ t.period }}</td>
+
+    <td>
+      <span class="badge" [ngClass]="getBadgeClass(t.congestionLevel)">
+{{ getCongestionText(t.congestionLevel) }}
+      </span>
+    </td>
+  </tr>
+</tbody>
+
+    </table>
+  </div>
+</div>
